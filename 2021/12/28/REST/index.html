@@ -20,15 +20,20 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","Pisces | Gemini":240,"width":300,"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Leah">
-<meta property="og:url" content="http://example.com/categories/test/index.html">
+  <meta name="description" content="REST到底是个啥">
+<meta property="og:type" content="article">
+<meta property="og:title" content="REST">
+<meta property="og:url" content="http://example.com/2021/12/28/REST/index.html">
 <meta property="og:site_name" content="Leah">
+<meta property="og:description" content="REST到底是个啥">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-12-28T08:14:35.000Z">
+<meta property="article:modified_time" content="2021-12-28T08:43:06.701Z">
 <meta property="article:author" content="Leah">
+<meta property="article:tag" content="REST">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/categories/test/">
+<link rel="canonical" href="http://example.com/2021/12/28/REST/">
 
 
 <script id="page-configurations">
@@ -36,12 +41,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>Category: test | Leah</title>
+  <title>REST | Leah</title>
   
 
 
@@ -149,51 +154,118 @@
         <div class="content-wrap">
           
 
-          <div class="content category">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">test
-          <small>Category</small>
-        </h2>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/28/REST/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="Leah">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Leah">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          REST
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-12-28 16:14:35 / Modified: 16:43:06" itemprop="dateCreated datePublished" datetime="2021-12-28T16:14:35+08:00">2021-12-28</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Networks/" itemprop="url" rel="index"><span itemprop="name">Networks</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2021</span>
+        <p>REST到底是个啥</p>
+<span id="more"></span>
+
+<p>大致了解RESTful的概念之后简单补充一下它产生的背景：在互联网兴起初期，web页面请求量不高，对接口要求也不高，简单的一些动态jsp就可以满足大多数需求。但是随着不断发展，动态页面被html+js的前后端分离的形式所取代。后来客户端开始多元化（web端、IOS、Android、小程序等等），各式各样的都要与服务器通信，接口的规范又都不太一致，事情就很难办啦。**</p>
+<p>REST（<strong>RE</strong>presentational <strong>S</strong>tate <strong>T</strong>ransfer）的官方定义：an <strong>architectural style</strong> for distributed hypermedia systems。它本身不是什么新的技术或者架构，而是一种接口设计/架构<strong>风格</strong>。由于REST风格API有着结构清晰、易于理解、方便扩展等特征，正逐步成为目前最流行的接口设计风格，通常用于设计基于HTTP的松耦合的web服务开发。</p>
+<p>和其他架构风格一样，REST也有自己的<strong>指导原则</strong>和约束条件。要设计严格意义上的REST风格API，需要了解以下6个约束条件：</p>
+<p>1、<strong>统一接口</strong>（Uniform Interface）</p>
+<p>统一接口包含了一组受限的预定义的操作，不论什么样的资源，都是通过使用相同的接口进行资源的访问。也就是说从接口只能定位资源，需要从请求方法来判断执行了什么操作。**</p>
+<p>2、<strong>客户端-服务端</strong>（Client-server）</p>
+<p>这种模式强制分离客户端和服务器，使得两者更加独立，从而提高客户端跨平台的可移植性。**</p>
+<p>3、<strong>无状态</strong>（Stateless）</p>
+<p>即服务器不保存客户端的状态和上下文，从客户端到服务器的每一次请求都需要包含它所需要的所有信息。**</p>
+<p>（例如：如果只需用户登录一次，然后执行其他授权操作，那么来自客户端的每个请求都应该包含服务请求所需的所有信息——包括身份验证和授权的细节）**</p>
+<p>4、<strong>可缓存</strong>（Cacheable）</p>
+<p>这一点要求响应隐式或显式地将自己标记为可缓存或不可缓存，从而来判断是否可以为相同的请求或在指定的时间段内的请求重用该响应返回的数据，从而来提高性能。**</p>
+<p>5、<strong>分层系统</strong>（Layered system）</p>
+<p>通过约束组件的行为来允许体系结构由层次结构层组成，可以更灵活的部署系统。**</p>
+<p>（例如：将api部署在服务器A上，将数据存储在服务器B上，并在服务器C中验证请求。而客户端通常没有办法判断它是直接连接到终端服务器还是连接在中间设备上）**</p>
+<p>6、<strong>按需代码</strong>（Code on demand ，可选）</p>
+<p>这一点允许我们灵活的发送一些特殊的代码给客户端来扩展功能，但不是REST所必需要求的。服务器可以以代码形式实现客户端部分feature，客户端只需要执行这些代码就可以达到期望，因此可以通过减少需要预先实现feature数量来简化客户端。**</p>
+<p>关于接口统一中提到的资源，这是REST中一个关键的抽象概念。简单的说数据都可以被看成资源，可以是图片、文件、一个实体、也可以是一些资源的集合等等。而这些资源都需要相互区分从而才能定位和访问，因此每个资源都需要有一个互不相同的“名字”，在web中这个唯一的标识就是——统一资源标识符（URI，<strong>Uniform Resource Identifier</strong>）。</p>
+<p>URI既可以看成是资源的地址，也可以看成是资源的名称。URI的设计应该遵循可寻址性原则，比如显式地给出id属性；并且URI应该具有自描述性，需要在形式上给人以直觉上的关联，因此严格遵循REST风格的API可读性比较好。正如“统一接口”原则说到的，只从接口定位元素，具体操作需要看请求方法，因此URI不应该包含操作，简单说就是最后不要包含如create、delete、update等动词。统一接口要求客户端和服务器通过使用标准化的接口和协议来交换资源的表示来达到资源状态的变换。通常，HTTP是最常用的协议，但REST没有强制要求使用它。在HTTP的REST实例中，我们利用标准的HTTP方法如GET、PUT、POST、DELETE、PATCH来统一接口对服务器端的资源进行操作。**</p>
+<p>分析之后，下面这些设计建议就比较好理解了：**</p>
+<ul>
+<li>使用小写字母**</li>
+<li>使用‘ / ’来表示资源的层级关系，但结尾不要有‘ / ’**</li>
+<li>使用‘ ? ’用来过滤资源**</li>
+<li>URI中不出现动词**</li>
+<li>使用连字符‘ - ’来提高名称的可读性**</li>
+</ul>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-12-14T22:17:59+08:00"
-              content="2021-12-14">
-          12-14
-        </time>
-      </div>
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/REST/" rel="tag"># REST</a>
+          </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/12/14/hello-world/" itemprop="url">
-            <span itemprop="name">Hello World</span>
-          </a>
-      </div>
+        
 
-    </header>
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/12/14/hello-world/" rel="prev" title="Hello World">
+      <i class="fa fa-chevron-left"></i> Hello World
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
   </article>
-
-    </div>
-  </div>
   
   
-  
-
   
 
 
@@ -261,7 +333,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -274,7 +346,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
