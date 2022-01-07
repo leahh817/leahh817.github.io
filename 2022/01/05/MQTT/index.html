@@ -20,20 +20,24 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","Pisces | Gemini":240,"width":300,"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="简单了解一下REST">
+  <meta name="description" content="简单了解一下MQTT">
 <meta property="og:type" content="article">
-<meta property="og:title" content="REST">
-<meta property="og:url" content="http://example.com/2021/12/28/REST/index.html">
+<meta property="og:title" content="MQTT">
+<meta property="og:url" content="http://example.com/2022/01/05/MQTT/index.html">
 <meta property="og:site_name" content="Leah">
-<meta property="og:description" content="简单了解一下REST">
+<meta property="og:description" content="简单了解一下MQTT">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-12-28T08:14:35.000Z">
-<meta property="article:modified_time" content="2022-01-05T07:41:42.138Z">
+<meta property="og:image" content="http://example.com/images/image-20211221144445478.png">
+<meta property="og:image" content="http://example.com/images/image-20211221153241150.png">
+<meta property="og:image" content="http://example.com/images/image-20211221155503805.png">
+<meta property="article:published_time" content="2022-01-05T07:37:09.000Z">
+<meta property="article:modified_time" content="2022-01-05T09:54:41.573Z">
 <meta property="article:author" content="Leah">
-<meta property="article:tag" content="REST">
+<meta property="article:tag" content="MQTT">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/image-20211221144445478.png">
 
-<link rel="canonical" href="http://example.com/2021/12/28/REST/">
+<link rel="canonical" href="http://example.com/2022/01/05/MQTT/">
 
 
 <script id="page-configurations">
@@ -46,7 +50,7 @@
   };
 </script>
 
-  <title>REST | Leah</title>
+  <title>MQTT | Leah</title>
   
 
 
@@ -161,7 +165,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/28/REST/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/01/05/MQTT/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpeg">
@@ -174,7 +178,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          REST
+          MQTT
         </h1>
 
         <div class="post-meta">
@@ -183,16 +187,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2021-12-28 16:14:35" itemprop="dateCreated datePublished" datetime="2021-12-28T16:14:35+08:00">2021-12-28</time>
+              <time title="Created: 2022-01-05 15:37:09 / Modified: 17:54:41" itemprop="dateCreated datePublished" datetime="2022-01-05T15:37:09+08:00">2022-01-05</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-01-05 15:41:42" itemprop="dateModified" datetime="2022-01-05T15:41:42+08:00">2022-01-05</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -214,42 +212,169 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>简单了解一下REST</p>
+        <p>简单了解一下MQTT</p>
 <span id="more"></span>
-<h4 id="REST是个啥"><a href="#REST是个啥" class="headerlink" title="REST是个啥"></a>REST是个啥</h4><p>REST（<strong>RE</strong>presentational <strong>S</strong>tate <strong>T</strong>ransfer）的官方定义：an <strong>architectural style</strong> for distributed hypermedia systems。它本身不是什么新的技术或者架构，而是一种接口设计/架构<strong>风格</strong>。由于REST风格API有着结构清晰、易于理解、方便扩展等特征，正逐步成为目前最流行的接口设计风格，通常用于设计基于HTTP的松耦合的web服务开发。</p>
-<p>简单补充一下它的背景：在互联网兴起初期，web页面请求量不高，对接口要求也不高，简单的一些动态jsp就可以满足大多数需求。但是随着不断发展，动态页面被html+js的前后端分离的形式所取代。后来客户端开始多元化（web端、IOS、Android、小程序等等），各式各样的都要与服务器通信，接口的规范又都不太一致，事情就很难办啦。2000年Roy Thomas Fielding在他的博士论文中首次提出并详细介绍了REST。</p>
-<h4 id="6个约束条件"><a href="#6个约束条件" class="headerlink" title="6个约束条件"></a>6个约束条件</h4><p>和其他架构风格一样，REST也有自己的<strong>指导原则</strong>和约束条件。要设计严格意义上的REST风格API，需要了解以下约束条件以及这样约束的目的：<br>1、<strong>统一接口</strong>（Uniform Interface）</p>
-<p>统一接口包含了一组受限的预定义的操作，不论什么样的资源，都是通过使用相同的接口进行资源的访问。也就是说从接口只能定位资源，需要从请求方法来判断执行了什么操作。</p>
-<p>2、<strong>客户端-服务端</strong>（Client-server）</p>
-<p>这种模式强制分离客户端和服务器，使得两者更加独立，从而提高客户端跨平台的可移植性。</p>
-<p>3、<strong>无状态</strong>（Stateless）</p>
-<p>即服务器不保存客户端的状态和上下文，从客户端到服务器的每一次请求都需要包含它所需要的所有信息。</p>
-<p>（例如：如果只需用户登录一次，然后执行其他授权操作，那么来自客户端的每个请求都应该包含服务请求所需的所有信息——包括身份验证和授权的细节）</p>
-<p>4、<strong>可缓存</strong>（Cacheable）</p>
-<p>这一点要求响应隐式或显式地将自己标记为可缓存或不可缓存，从而来判断是否可以为相同的请求或在指定的时间段内的请求重用该响应返回的数据，从而来提高性能。</p>
-<p>5、<strong>分层系统</strong>（Layered system）</p>
-<p>通过约束组件的行为来允许体系结构由层次结构层组成，可以更灵活的部署系统。</p>
-<p>（例如：将api部署在服务器A上，将数据存储在服务器B上，并在服务器C中验证请求。而客户端通常没有办法判断它是直接连接到终端服务器还是连接在中间设备上）</p>
-<p>6、<strong>按需代码</strong>（Code on demand ，可选）</p>
-<p>这一点允许我们灵活的发送一些特殊的代码给客户端来扩展功能，但不是REST所必需要求的。服务器可以以代码形式实现客户端部分feature，客户端只需要执行这些代码就可以达到期望，因此可以通过减少需要预先实现的feature数量来简化客户端。</p>
-<hr>
-<h4 id="统一接口"><a href="#统一接口" class="headerlink" title="统一接口"></a>统一接口</h4><p>关于接口统一中提到的资源，这是REST中一个关键的抽象概念。简单的说数据都可以被看成资源，可以是图片、文件、一个实体、也可以是一些资源的集合等等。而这些资源都需要相互区分从而才能定位和访问，因此每个资源都需要有一个互不相同的“名字”，在web中这个唯一的标识就是——统一资源标识符（URI，<strong>Uniform Resource Identifier</strong>）。URI既可以看成是资源的地址，也可以看成是资源的名称。URI的设计应该遵循可寻址性原则，比如显式地给出id属性；并且URI应该具有自描述性，需要在形式上给人以直觉上的关联，因此严格遵循REST风格的API可读性比较好。</p>
-<p>正如“统一接口”原则说到的，只从接口定位元素，具体操作需要看请求方法，因此URI不应该包含操作，简单说就是最后不要包含如create、delete、update等动词。统一接口要求客户端和服务器通过使用标准化的接口和协议来交换资源的表示来达到资源状态的变换。通常，HTTP是最常用的协议，但REST没有强制要求使用它。在HTTP的REST实例中，我们利用标准的HTTP方法如GET、PUT、POST、DELETE、PATCH来统一接口对服务器端的资源进行操作：</p>
+
+<p>MQTT（Message Queuing Telemetry Transport，消息队列<strong>遥测</strong>传输协议）是一个基于客户端-服务器的消息<strong>发布/订阅</strong>传输协议。可以用极少的代码和有限的带宽，为远程小型或受限设备提供<strong>实时</strong>可靠的消息服务。</p>
+<p>mqtt协议中有三种身份：发布者（Publisher）、代理（Broker）、订阅者（Subscriber）。消息代理也就是服务器，消息的发布者和订阅者都是客户端，其中消息的发布者可以同时是订阅者，这种模式提供了一种一对多的消息发布。下图简单描述了它们之间的关系：</p>
+<p><img src="/images/image-20211221144445478.png" alt="这是图片" title="MQTT三种身份"></p>
+<p>MQTT传输的消息分为Topic和Payload两部分。发布的消息不是直接给到订阅者的，这些消息是先发给代理，而代理的主要工作就是通过消息的topic来筛选消息，并发送给对应的已经订阅这些消息的订阅者。Payload部分可以理解为消息的内容。</p>
+<p>主流MQTT是基于TCP/IP连接的（也有基于UDP的，叫MQTT-SN），而TCP是一种面向连接的协议，也就像打电话一样，只要一方挂电话就要重新建立连接才能再次通话。因此大多数MQTT客户端即使没有发送数据也会保持与代理的连接。就像挂了电话就无法通话一样，没有连接不能发布或者订阅消息，代理会使用连接确认消息来确认是否连接，MQTT客户端会定期(通常是60秒)发布一个keepalive消息，它告诉代理客户机仍处于连接状态。</p>
+<p><img src="/images/image-20211221153241150.png" alt="image"></p>
+<p>当客户端与服务器建立起连接后就是一个会话，每个会话中可以包含多个订阅，每个订阅有topic filter来筛选匹配的订阅消息。客户端与代理建立的会话默认是clean session，也就是在断开连接的时候代理不需要记住客户端的任何信息。而一个non clean session则需要代理在断开连接后记住客户端的订阅并且保持没有送达的消息。而是否保持需要取决于订阅主题时使用的QoS（Quality of service），以及发布这些主题时使用的服务质量。</p>
+<p><img src="/images/image-20211221155503805.png" alt="image"></p>
+<p>QoS级别是消息的发送方和消息的接收方之间的协议，它定义了特定消息的传递保证。MQTT中有3个QoS级别:</p>
 <ul>
-<li>GET（SELECT）：取出资源</li>
-<li>POST（CREATE）：新建资源</li>
-<li>PUT（UPDATE）：更新资源（客户端提供完整资源数据）</li>
-<li>PATCH（UPDATE）：更新资源（客户端提供需要修改的资源数据即部分更新）</li>
-<li>DELETE（DELETE）：删除资源</li>
+<li>最多一次（0）:</li>
+<li>最少一次（1）:</li>
+<li>正好一次（2）:</li>
 </ul>
-<h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><p>分析之后，下面这些设计建议就比较好理解了：</p>
-<ul>
-<li>使用小写字母</li>
-<li>使用‘ / ’来表示资源的层级关系，但结尾不要有‘ / ’</li>
-<li>使用‘ ? ’用来过滤资源</li>
-<li>URI中不出现动词</li>
-<li>使用连字符‘ - ’来提高名称的可读性</li>
-</ul>
+<p>从上面的介绍中我们知道了消息是经过代理的，不是直接从发布者到达订阅者的，因此考虑QoS也需要考虑两边：也就是发布者到代理间的消息传递和代理到订阅者间的消息传递。 发布者在将消息发送给代理时定义了消息的QoS级别，代理使用每个订阅者在订阅中定义的QoS级别将此消息发送给它。如果订阅客户端定义的QoS低于发布客户端，则代理将以较低的服务质量传输消息。</p>
+<h5 id="MQTT协议数据包的结构"><a href="#MQTT协议数据包的结构" class="headerlink" title="MQTT协议数据包的结构"></a>MQTT协议数据包的结构</h5><table>
+<thead>
+<tr>
+<th>组成部分</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Fixed Header</td>
+<td>固定报头，所有控制报文都有</td>
+</tr>
+<tr>
+<td>Variable header</td>
+<td>可变报头，部分控制报文包含</td>
+</tr>
+<tr>
+<td>Payload</td>
+<td>有效载荷，部分控制报文包含</td>
+</tr>
+</tbody></table>
+<p>固定报文中控制报文类型及其说明，以及对应类型是否需要payload的整理表格：</p>
+<table>
+<thead>
+<tr>
+<th>控制报文类型</th>
+<th>报文流动方向</th>
+<th>描述</th>
+<th>Payload</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>CONNECT</td>
+<td>客户端到服务端</td>
+<td>客户端请求连接服务端</td>
+<td>需要</td>
+</tr>
+<tr>
+<td>CONNACK</td>
+<td>服务端到客户端</td>
+<td>连接报文确认</td>
+<td>不需要</td>
+</tr>
+<tr>
+<td>PUBLISH</td>
+<td>两个方向都允许</td>
+<td>发布消息</td>
+<td>可选</td>
+</tr>
+<tr>
+<td>PUBACK</td>
+<td>两个方向都允许</td>
+<td>QoS 1消息发布收到确认</td>
+<td>不需要</td>
+</tr>
+<tr>
+<td>PUBREC</td>
+<td>两个方向都允许</td>
+<td>发布收到(保证交付第一步)</td>
+<td>不需要</td>
+</tr>
+<tr>
+<td>PUBREL</td>
+<td>两个方向都允许</td>
+<td>发布释放(保证交付第二步)</td>
+<td>不需要</td>
+</tr>
+<tr>
+<td>PUBCOMP</td>
+<td>两个方向都允许</td>
+<td>QoS 2消息发布完成(保证交互第三步)</td>
+<td>不需要</td>
+</tr>
+<tr>
+<td>SUBSCRIBE</td>
+<td>客户端到服务端</td>
+<td>客户端订阅请求</td>
+<td>需要</td>
+</tr>
+<tr>
+<td>SUBACK</td>
+<td>服务端到客户端</td>
+<td>订阅请求报文确认</td>
+<td>需要</td>
+</tr>
+<tr>
+<td>UNSUBSCRIBE</td>
+<td>客户端到服务端</td>
+<td>客户端取消订阅请求</td>
+<td>需要</td>
+</tr>
+<tr>
+<td>UNSUBACK</td>
+<td>服务端到客户端</td>
+<td>取消订阅报文确认</td>
+<td>不需要</td>
+</tr>
+<tr>
+<td>PINGREQ</td>
+<td>客户端到服务端</td>
+<td>心跳请求</td>
+<td>不需要</td>
+</tr>
+<tr>
+<td>PINGRESP</td>
+<td>服务端到客户端</td>
+<td>心跳响应</td>
+<td>不需要</td>
+</tr>
+<tr>
+<td>DISCONNECT</td>
+<td>客户端到服务端</td>
+<td>客户端断开连接</td>
+<td>不需要</td>
+</tr>
+</tbody></table>
+<p>MQTT报文固定头部的第一个字节的剩于4bit用来设置标志位，大部分类型报文的标志都是保留的，Publish类型的这四位分别是：</p>
+<table>
+<thead>
+<tr>
+<th>Bit</th>
+<th>标志名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>DUP</td>
+<td>发布消息的副本。用来在保证消息的可靠传输，如果设置为1，则在下面的变长中增加MessageId，并且需要回复确认，以保证消息传输完成，但不能用于检测消息重复发送。</td>
+</tr>
+<tr>
+<td>2</td>
+<td>QoS</td>
+<td>有0、1、2三个级别的QoS</td>
+</tr>
+<tr>
+<td>3</td>
+<td>QoS</td>
+<td>所以需要两位表示服务质量级别</td>
+</tr>
+<tr>
+<td>4</td>
+<td>RETAIN</td>
+<td>发布保留：服务器要保留这次推送的信息，如果有新的订阅者出现，就把这消息推送给它，如果设有那么推送至当前订阅者后释放。</td>
+</tr>
+</tbody></table>
 
     </div>
 
@@ -259,7 +384,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/REST/" rel="tag"># REST</a>
+              <a href="/tags/MQTT/" rel="tag"># MQTT</a>
           </div>
 
         
@@ -268,12 +393,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/12/14/hello-world/" rel="prev" title="Hello World">
-      <i class="fa fa-chevron-left"></i> Hello World
+    <a href="/2021/12/28/REST/" rel="prev" title="REST">
+      <i class="fa fa-chevron-left"></i> REST
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/01/05/MQTT/" rel="next" title="MQTT">
-      MQTT <i class="fa fa-chevron-right"></i>
+    <a href="/2022/01/05/WebSocket/" rel="next" title="WebSocket">
+      WebSocket <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -333,7 +458,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#REST%E6%98%AF%E4%B8%AA%E5%95%A5"><span class="nav-number">1.</span> <span class="nav-text">REST是个啥</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6%E4%B8%AA%E7%BA%A6%E6%9D%9F%E6%9D%A1%E4%BB%B6"><span class="nav-number">2.</span> <span class="nav-text">6个约束条件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%9F%E4%B8%80%E6%8E%A5%E5%8F%A3"><span class="nav-number">3.</span> <span class="nav-text">统一接口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B"><span class="nav-number">4.</span> <span class="nav-text">实例</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#MQTT%E5%8D%8F%E8%AE%AE%E6%95%B0%E6%8D%AE%E5%8C%85%E7%9A%84%E7%BB%93%E6%9E%84"><span class="nav-number">1.</span> <span class="nav-text">MQTT协议数据包的结构</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
